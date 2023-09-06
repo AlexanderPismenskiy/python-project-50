@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "diff calculator"
+authors = ["Alexander Pismenskiy <alex.pismenskiy@gmail.com>"]
+readme = "README.md"
+packages = [{include = "gendiff"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8.1,<4.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+pytest-cov = "^4.0.0"
+flake8 = "^6.0.0"
+
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.gendiff_info:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
